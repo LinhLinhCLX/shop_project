@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Buổi 8 ngày 02-08-2019</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+<!-- debai: Nhập và giá trị x, y. và một nút button random -->
+
+<form action="#">
+	<p>Nhập x = <input type="text" name= "x" value=""></p>
+	<p>Nhập y = <input type="text" name= "y" value=""></p>
+	<p><input type="button" name="ketqua" value="Random" onclick="random(this.form)"></p>
+</form>
+
+<script type="text/javascript">
+	function random(form)
+	{
+		x = eval(form.x.value);
+		y = eval(form.y.value);
+
+		// khai bao mang 2 chieu
+		var dem =0;
+		var c = new Array(y);
+		for(var i=0; i<y;i++)
+		{
+			c[i] = new Array(x);
+			for(var j=0;j<x;j++)
+			{
+				c[i][j] = ++dem;
+			}
+		}
+			
+		//in ra mang vua nhap
+		document.write("<br>In mang vua tao: <br>");
+		for(var i=0; i<y;i++)
+		{
+			document.write("<br>");
+			for(var j=0;j<x;j++)
+			{
+				var bien = c[i][j];
+				// document.write("c["+i+"]["+j+"] = "+bien);
+				document.write(bien+",   ");
+			}
+		}
+		console.log("--------mang x = ----", x);
+		console.log("--------mang y = ----", y);
+		// console.log("--------mang c = ----", c);
+	}
+</script>
+</body>
+</html>

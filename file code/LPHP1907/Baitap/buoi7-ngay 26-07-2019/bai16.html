@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bài 16</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- bai16 -->
+	<div class="box2">
+		<script type="text/javascript">
+			function bai16(){
+
+				// document.TieuDe.value;
+				// document.bgColor = MauNen.value;
+				// document.fgColor = MauChu.value;
+				// window.dedefaultStatus = TrangThai.value;
+				var chu = document.getElementById("bai16");
+				var title = document.getElementById("TieuDe");
+				var bg = document.getElementById("MauNen");
+				var color = document.getElementById("MauChu");
+				console.log("--------title = ----", title.value);
+				console.log("--------bg = ----", bg.value);
+				console.log("--------color = ----", color.value);
+				document.title = title.value;
+				window.document.bgColor = bg.value;
+				chu.style.color = color.value;
+			}
+		</script>
+		<h3 id="bai16">Bài 16</h3>
+		<input type="text" id="TieuDe" value="Tiêu đề mới">
+ 		<input type="text" id="MauNen" value="Nhập màu (ví dụ blue)"> <BR>
+ 		<input type="text" id="MauChu" value="Nhập màu chữ  (ví dụ white)">
+ 		<input type="text" name="TrangThai" value="Nhập dòng trạng thái "> <BR>
+ 		<input type="button" name ="ThayDoi" value="Thay đổi" onclick="bai16();">
+ 
+		
+	</div>
+</body>
+</html>

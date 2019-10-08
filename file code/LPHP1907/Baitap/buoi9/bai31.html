@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bài 1</title>
+	<style type="text/css" media="screen">
+		*{
+			margin:0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		
+		.baitap{
+			width: 800px;
+			height: 100px;
+			background-color: pink;
+			margin: 10px auto;
+		}
+	</style>
+</head>
+<body>
+	<!-- bai1
+	<div class="baitap">
+		<h3>bài 1</h3>
+		<script type ="text/javascript">
+			var date = new Date();
+			var thu = date.getDay()+1;
+			var ngay = date.getDate();
+			var thang = date.getMonth()+1;
+			var nam = date.getFullYear();
+			alert( "Hôm nay là thứ " + thu+ " ngày "+ngay+" tháng "+thang+ " năm "+nam);
+			document.write("Hôm nay là thứ " + thu+ " ngày "+ngay+" tháng "+thang+ " năm "+nam);
+		</script>
+	</div> -->
+	<!-- bai2 
+	<div class="baitap">
+		<h3>bài 2</h3>
+		<script type ="text/javascript">
+			var date = new Date();
+			var thu = date.getDay()+1;
+			var ngay = date.getDate();
+			var thang = date.getMonth()+1;
+			var nam = date.getFullYear();
+			document.title="Hôm nay là thứ " + thu+ " ngày "+ngay+" tháng "+thang+ " năm "+nam;
+		</script>
+	</div>-->
+	<!-- bai3
+	<div class="baitap">
+		<h3>bài 3</h3>
+		<script type ="text/javascript">
+			var date = new Date();
+			var namhientai = date.getFullYear();
+			var namsinh = prompt("Bạn sinh năm bao nhiêu? ", "");
+			alert("Tuổi bạn bây giờ là: "+(namhientai - namsinh));
+		</script>
+	</div> -->
+	<!-- bai4 
+	<div class="baitap">
+		<h3>bài 4</h3>
+		<script type ="text/javascript">
+			var date = new Date();
+			var namsinh;
+			var namhientai = date.getFullYear();
+			do{
+				namsinh = prompt("Bạn sinh năm bao nhiêu? ", "");
+			}while(parseInt(namsinh)>namhientai);
+			alert("Tuổi bạn bây giờ là: "+(namhientai - namsinh));
+		</script>
+	</div>-->
+	<!-- bai5 
+	<div class="baitap">
+		<h3>bài 5</h3>
+		<script type="text/javascript">
+			var choose;
+			choose = prompt("Hãy chọn 1 số từ 1 đến 3 để mở một trang web ");
+			switch(choose)
+			{
+				case "1": 
+					window.open("https://www.vnn.com");
+					break;
+				case "2": 
+					window.open("https://www.yahoo.com");
+					break;
+				case "3": 
+					window.open("https://www.echip.com.vn");
+					break;
+				default: window.open("https://google.com.vn").
+			}
+		</script>
+	</div>-->
+	<!-- bai6 
+	<div class="baitap">
+		<h3>bài 6: Sắp xếp mảng</h3>
+		<script type="text/javascript">
+			var soluong, x;
+			var ds = new Array(10);
+			do{
+				soluong = prompt("Bạn muốn nhập bao nhiêu người? ", "");
+			}while((parseInt(soluong)>10) || (parseInt(soluong) <0));
+			for(var i= 0; i<soluong; i++)
+			{
+				ds[i] = prompt("Nhập vào họ tên: ", "");
+			}
+			ds.sort();
+			document.write("<h2>Danh sách đã sắp xếp là: </h2>");
+			for(x in ds)
+			{
+				document.write(ds[x] + "<br>");
+			}
+		</script>
+	</div>-->
+
+	<!-- bai31
+	<div class="baitap">
+		<h2 id="lienket" style="background-color: blue; color: yellow;" onmousemove="document.all.lienket.style.background = 'red'" onmouseout="document.all.lienket.style.background = 'blue'">
+			
+		bài 31: Minh họa sự kiện di chuột</h2>
+		
+		<script type="text/javascript">
+			
+		</script>
+	</div> -->
+
+	<!-- bai32 
+	<div class="baitap">
+		<h2 id="lienket" style="background-color: blue; color: yellow;" onmousemove="document.all.lienket.style.background = 'red'" onmouseout="document.all.lienket.style.background = 'blue'" onclick="window.open('https://www.w3schools.com');" ">bài 32:Tạo liên kết hoàn chỉnh về một trang web</h2>
+
+		<script type="text/javascript">
+			
+		</script>
+	</div>-->
+	
+	<!-- bai33
+	<div class="baitap">
+		<h3>bài 33</h3>
+		<div id="lienket" style = "font-size: 20px; font-family: Arial;position:absolute; top: 40px; left: 10px; width:200px;visibility: hidden;">Click cào website!</div>
+		<table>
+			<tr>
+				<td onclick="document.all.lienket.visibility = 'visible';">
+					<a href="https://www.w3schools.com" >W3school</a>
+				</td>
+			</tr>
+			<tr>
+				<td onclick="document.all.lienket.visibility = 'visible';"><a href="https://github.com" >GitHub</a></td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			document.getElementById("lienket").style.color = 'white';
+			document.getElementById("lienket").style.backgroundColor = 'magenta';
+
+		</script>
+	</div> -->
+
+	<!-- bai34
+	<div class="baitap" >
+		<h3>bài 34: tạo menu sử dụng javascript</h3>
+		<ul style="list-style: none;float: left;">
+			<li style="float: left; background-color: lightgreen;" onmouseout ="an();" onmousemove="hienthi();">Các liên kết
+				<div id="menu1" class="menu"  style="display:none;">
+					<ul style="list-style: none;">
+						<li><a href="https://www.w3schools.com">W3school</a></li>
+						<li><a href="https://github.com">GitHub</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="float: left; background-color: lightgreen;" onmouseout ="an2();" onmousemove="hienthi2();">Tin tức 
+				<div id="menu2"  class="menu"  style="display:none;">
+					<ul style="list-style: none;">
+						<li><a href="https://dantri.com.vn">Dân trí</a></li>
+						<li><a href="https://vtv.vn">VTV</a></li>
+					</ul>
+				</div>
+			</li>
+			<li style="float: left; background-color: lightgreen;" onmouseout ="an3();" onmousemove="hienthi3();">Các trường đại học
+				<div id="menu3"  class="menu" style="display:none;">
+					<ul style="list-style: none;">
+						<li><a href = "https://www.hust.edu.vn/">Đại học Bách khoa Hà Nội</a></li>
+						<li><a href = "https://tmu.edu.vn/">Đại học Thương Mại</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<script type="text/javascript">
+			function hienthi()
+			{
+				document.getElementById("menu1").style.display='block';
+			}
+			function an()
+			{
+				document.getElementById("menu1").style.display='none';
+			}
+			function hienthi2()
+			{
+				document.getElementById("menu2").style.display='block';
+			}
+			function an2()
+			{
+				document.getElementById("menu2").style.display='none';
+			}
+			function hienthi3()
+			{
+				document.getElementById("menu3").style.display='block';
+			}
+			function an3()
+			{
+				document.getElementById("menu3").style.display='none';
+			}
+		</script>
+	</div> -->
+	<!-- bai35
+	<div class="baitap">
+		<h2 id="inner" onclick="document.all.inner.innerText='Minh họa thành công!!'">Bài 35: Minh họa thuộc tính innerText</h2>
+	</div> -->
+	<!-- bai36
+	<div class="baitap">
+		<h2 id="inner" onclick="document.all.inner.innerText='OKE'">Bài 36:Click vào đây</h2>
+		
+	</div> -->
+	<!-- bai37 
+	<div class="baitap">
+		<h2>Bài 37</h2>
+		<input type="button" value="Open website W3school" onclick="change();" id="nut1">
+	</div>
+	<script type="text/javascript">
+		function change()
+		{
+			window.open("https://www.w3schools.com","_blank");
+ 			document.all.nut1.outerText="Trang này đã thăm";
+		}
+	</script>-->
+	<!-- bai38
+	<div class="baitap">
+		<h2>Bài 38:</h2>
+		<h1 id="lienket" onclick="chenlienket();">Nhấp vào đây! </h1>
+		
+	</div>
+	<script type="text/javascript">
+		function chenlienket()
+		{
+ 			document.all.lienket.outerHTML='<a href=\"https:\/\/www.w3schools.com\">W3school<\/a>';
+		}
+	</script> -->
+	<!-- bai39
+	<div class="baitap">
+		<h2>Bài 39:</h2>
+		<input type="button" value="Đăng ký" onmousemove ="HienThi();" onmouseout ="AnTang();"> 
+ 		<div id= "Tang1" style="position:absolute; visibility: hidden; background-color:yellow">
+ 			Đăng ký địa chỉ email mới
+ 		</div>
+	</div>
+	<script type="text/javascript">
+		function HienThi()
+		 {
+		 document.all.Tang1.style.pixelLeft = event.clientX;
+		 document.all.Tang1.style.pixelTop = event.clientY;
+		 document.all.Tang1.style.visibility = 'visible';
+		 }
+		 function AnTang() // Ẩn Tầng Tang1
+		 {
+		 document.all.Tang1.style.visibility = 'hidden';
+		 }
+	</script> -->
+	<!-- bai40 
+	<div class="baitap">
+		<h2>Bài 40:</h2>
+		<layer name="Tang1">
+ 			<h1> Tầng này dùng để hiển thị trang Web bạn gõ trong hộpText!</h1>
+ 		</layer>
+ 		<form name="Form1">
+ 			<input type="text" name="DiaChi">
+ 			<input type="button" value ="Load" onclick="document.Tang1.src = document.form1.DiaChi.value">
+
+ 		</form>
+	</div>
+	<script type="text/javascript">
+		function HienThi()
+		{
+			 document.all.Tang1.style.pixelLeft = event.clientX;
+			 document.all.Tang1.style.pixelTop = event.clientY;
+			 document.all.Tang1.style.visibility = 'visible';
+		}
+		function AnTang() // Ẩn Tầng Tang1
+		{
+		 	document.all.Tang1.style.visibility = 'hidden';
+		}
+	</script>-->
+	<!-- bai1
+	<div class="baitap">
+		<h2>Bài 1:</h2>
+		<layer name="tang1">
+			<h1  name="tang">Hello!!!</h1>
+		</layer>
+		<input type="button" value ="Thay đổi" onclick="change();">
+	</div>
+	<script type="text/javascript">
+		function change()
+		{
+			var noidung = prompt("Nhập vào đây một chuỗi!!","0");
+			document.all.tang.innerText = noidung.value;
+			document.all.tang1.innerHTML = '<a href=\"https:\/\/www.w3schools.com\">W3school innerHTML<\/a>';
+			document.all.tang1.outerText = noidung.value;
+			document.all.tang1.outerHTML='<a href=\"https:\/\/www.w3schools.com\">W3school outerHTML<\/a>';
+
+		}
+	</script> -->
+	<!-- bai2
+	<div class="baitap">
+		<h2>Bài 2:</h2>
+		<h1 class="text" style="color: blue;" >Giờ ở đây</h1>
+	</div>
+	<script type="text/javascript">
+		setInterval(function(){
+			var d = new Date();
+			var n = d.toLocaleTimeString();
+			document.getElementById("text").innerText = n;
+		}, 1000);
+		
+	</script> -->
+	<!-- bai3 -->
+	<div class="baitap">
+		<h2>Bài 3:</h2>
+		<layer id = "tang1">
+			<h3>Tầng 1</h3>
+
+		</layer>
+		<layer id = "tang2">
+			<h3>Tầng 2</h3>
+
+		</layer>
+
+		<h1 class="text" style="color: blue;" >Giờ ở đây</h1>
+	</div>
+	<script type="text/javascript">
+		setInterval(function(){
+			var d = new Date();
+			var n = d.toLocaleTimeString();
+			document.getElementById("text").innerText = n;
+		}, 1000);
+		
+	</script>
+</body>
+</html>

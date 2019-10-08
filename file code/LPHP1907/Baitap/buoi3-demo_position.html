@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> Demo Position</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		*{
+			margin:0px;
+			padding: 0px;
+			font-family: sofia-pro,sans-serif;
+		}
+		header{
+			background-color: #2a2325;
+			height: 300px;
+			/*background-image: url("img/anhnen.png");*/
+			top:-200px;
+		}
+		main{
+			background-color: lightgray;
+			min-height: 1300px;
+			height: auto;
+
+		}
+		.header{
+			background-color: #2a2325;
+			width: 1500px;
+			margin: 0 auto;
+		}
+		.menu{
+			background-color: black;
+			width: 1500px;
+			margin: auto;
+			position: relative;
+		}
+		.nav{
+			background-color: black;
+			/*width: auto;*/
+			height: 40px;
+			line-height: 40px;
+			/*position: fixed;
+			left: 100px;*/
+		}
+		
+		ul{
+			list-style: none;
+			display: block;
+		}
+		ul li{
+			background-color: black;
+			height: 40px;
+			width: 150px;
+			float: left;
+			text-align: center;
+			font-size: 16px;
+			line-height: 40px;
+		}
+		ul li a{
+			text-decoration: none;
+			color: white;
+			
+		}
+		ul li:hover{
+			background-color: #2a2325;
+			color: white;
+			
+		}
+		
+		.nav li .nav-s{
+			width: 500px;
+			height: auto;
+			background-color: pink;
+			
+		}
+		ul li .nav-s ul{
+			float:left;
+			width: 150px;
+			
+
+		}
+		ul li .nav-s ul li{
+			display: none;
+		}
+		ul li:hover .nav-s ul li{
+			display: block;
+			background-color: #2a2325;
+		}
+		ul li:hover .nav-s ul li:hover{
+			display: block;
+			background-color: #EB3656;
+		}
+		.search{
+			float: right;
+		}
+		.inp-search{
+			width: 200px;
+			height: 30px;
+			line-height: 40px;
+			margin-top: 5px;
+			
+		}
+		.btn-search{
+			width: 80px;
+			font-size: 15px;
+			height: 30px;
+			margin-right: 10px;
+
+		}
+		.header-logo {
+			width: 200px;
+			height: 40px;
+			float: left;
+		}
+		.header-logo-heart {
+			width: 30px;
+			height: 30px;
+			float: left;
+		}
+		.header-logo-name {
+			margin-left: 5px;
+			height: 40px;
+			float: left;
+			line-height: 40px;
+			background-color: black;
+			font-size: 20px;
+			color: #ffffff;
+		}
+		/*main*/
+		.content{
+			margin: 5px auto;
+			background-color: lightgray;
+			width: 1200px;
+		}
+		.product-all{
+			margin-bottom: : 50px;
+			margin-top: 0px;
+			position: relative;
+		}
+		.products{
+			width: 33%;
+			height: auto;
+			float: left;
+			position: relative;
+			margin: -50px 0px 100px;
+
+		}
+		.product{
+			position: relative;
+			margin: 0 auto;
+			width: 320px;
+			background-color: #ffffff;
+			padding: 10px;
+			border: 1px solid white;
+			border-radius: 10px;
+		}
+		.free{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			border: 1px solid #11c1f4;
+			color:#ffffff;
+			position: absolute;
+			font-size: 15px;
+			line-height: 40px;
+			background-color: #11c1f4;
+			left: -10px;
+			top:-20px;
+			text-align: center;
+		}
+		.new img{
+			width: 320px;
+			height: 390px;
+		}
+		.title{
+			color: #ff3399;
+		}
+		.text-header{
+			color: white;
+			width: 1200px;
+			height: auto;
+			margin: 0 auto;
+		}
+		.text-header .content-header{
+			color: white;
+			width: 700px;
+			height: auto;
+			margin: 30px 20px;
+		}
+		.text-header h1{
+			margin: 30px 0px;
+			font-size: 40px;
+		}
+
+		.text-header .text{
+			color:#f8f8f8;
+			font-size: 20px;
+
+		}
+		.text-header .text span a{
+			color:#f8f8f8;
+			font-size: 20px;
+		}
+		.text-header .text span a:hover{
+			color:#EB3656;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<header id="header" class="">
+		<div class="header">
+			<div class="menu">
+				<div class="search">
+					<form action="#">
+						<input type="text" class="inp-search" placeholder="Search...">
+						<button class="btn-search">Search</button>
+					</form>
+				</div>
+				<div class="header-logo">
+					<div class="header-logo-heart"><img src="img/logo-heart.png" alt="" height="30px" width="30px"></div>
+					<div class="header-logo-name">One page love</div>
+				</div>
+				<ul class="nav">
+					<li><a href="#"><i class="fa fa-home"> </i>Inspiration</a>
+						<div class="nav-s">
+							<ul>
+								<li class="menushow"><a href="#">JAVA</a></li>
+								<li class="menushow"><a href="#">PHP</a>PHP</li>
+								<li class="menushow">JAVASCRIPT</li>
+								<li class="menushow">TYPESCRITP</li>
+								<li class="menushow">C#</li>
+							</ul>
+							<ul>
+								<li class="menushow"><a href="#">JAVA</a></li>
+								<li class="menushow"><a href="#">PHP</a>PHP</li>
+								<li class="menushow">JAVASCRIPT</li>
+								<li class="menushow">TYPESCRITP</li>
+								<li class="menushow">C#</li>
+							</ul>
+							<ul>
+								<li class="menushow"><a href="#">JAVA</a></li>
+								<li class="menushow"><a href="#">PHP</a>PHP</li>
+								<li class="menushow">JAVASCRIPT</li>
+								<li class="menushow">TYPESCRITP</li>
+								<li class="menushow">C#</li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">Templates</a>
+						<div class="nav-s">
+							<ul>
+								<li class="menushow"><a href="#">JAVA</a></li>
+								<li class="menushow"><a href="#">PHP</a>PHP</li>
+								<li class="menushow">JAVASCRIPT</li>
+								<li class="menushow">TYPESCRITP</li>
+								<li class="menushow">C#</li>
+							</ul>
+							<ul>
+								<li class="menushow"><a href="#">JAVA</a></li>
+								<li class="menushow"><a href="#">PHP</a>PHP</li>
+								<li class="menushow">JAVASCRIPT</li>
+								<li class="menushow">TYPESCRITP</li>
+								<li class="menushow">C#</li>
+							</ul>
+						</div>
+						
+						
+					</li>
+					<li><a href="#">Articles</a>
+						<div class="nav-s">
+							<ul>
+								<li class="menushow">Laravel</li>
+								<li class="menushow">CodeIgniter</li>
+								<li class="menushow">Yii 2</li>
+								<li class="menushow">Spring</li>
+								<li class="menushow">.NET</li>
+							</ul>
+							<ul>
+								<li class="menushow">Laravel</li>
+								<li class="menushow">CodeIgniter</li>
+								<li class="menushow">Yii 2</li>
+								<li class="menushow">Spring</li>
+								<li class="menushow">.NET</li>
+							</ul>
+							<ul>
+								<li class="menushow">Laravel</li>
+								<li class="menushow">CodeIgniter</li>
+								<li class="menushow">Yii 2</li>
+								<li class="menushow">Spring</li>
+								<li class="menushow">.NET</li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">Post Case</a>
+						<div class="nav-s">
+							<ul>
+								<li class="menushow">Laravel</li>
+								<li class="menushow">CodeIgniter</li>
+								<li class="menushow">Yii 2</li>
+								<li class="menushow">Spring</li>
+								<li class="menushow">.NET</li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">Subrcibe</a></li>
+					<li><a href="#">Info</a></li>
+					<!-- <li>
+						<div class="search">
+							<form action="#">
+								<input type="text" class="inp-search" placeholder="Search...">
+								<button class="btn-search">S</button>
+							</form>
+						</div>
+					</li> -->
+				</ul>
+				
+			</div>
+			<div class="text-header">
+				<div class="content-header">
+					<h1>83 Free One Page Templates</h1>
+					<div class="text">
+						Free One Page Templates that are great to quickly test our ideas before committing to a big project development. See our <span class="font-red"><a href="#" title="">July $2.95 Hosting Special</a></span>
+					</div>	
+				</div>
+				
+			</div>
+		</div>
+		
+	</header><!-- /header -->
+	<main>
+		<div class="content">
+			<div class="product-all">
+				<div class="products">
+					<div class="product">
+						<div class="free">Free</div>
+						<div class="new"><img src="img/buoi3.1.jpg" alt=""></div>
+						<div class="title"><h3>My Product</h3></div>
+						<div class="mota">Sản phẩm của chúng tôi</div>
+						<input class="buy" type="submit" value="Mua ngay"></input>
+					</div>
+				</div>
+				<div class="products">
+					<div class="product">
+						<div class="free">Free</div>
+						<div class="new"><img src="img/buoi3.1.jpg" alt=""></div>
+						<div class="title"><h3>Ảnh đáng yêu</h3></div>
+						<div class="mota">Sản phẩm của chúng tôi</div>
+						<input class="buy" type="submit" value="Mua ngay"></input>
+					</div>
+				</div>
+				<div class="products">
+					<div class="product">
+						<div class="free">Free</div>
+						<div class="new"><img src="img/buoi3.2.jpg" alt=""></div>
+						<div class="title"><h3>My Product</h3></div>
+						<div class="mota">Sản phẩm của chúng tôi</div>
+						<input class="buy" type="submit" value="Mua ngay"></input>
+					</div>
+				</div>
+			</div>
+			<div class="product-all">
+				<div class="products">
+					<div class="product">
+						<div class="free">Free</div>
+						<div class="new"><img src="img/buoi3.2.jpg" alt=""></div>
+						<div class="title"><h3>My Product</h3></div>
+						<div class="mota">Sản phẩm của chúng tôi</div>
+						<input class="buy" type="submit" value="Mua ngay"></input>
+					</div>
+				</div>
+				<div class="products">
+					<div class="product">
+						<div class="free">Free</div>
+						<div class="new"><img src="img/buoi3.1.jpg" alt=""></div>
+						<div class="title"><h3>Ảnh đáng yêu</h3></div>
+						<div class="mota">Sản phẩm của chúng tôi</div>
+						<input class="buy" type="submit" value="Mua ngay"></input>
+					</div>
+				</div>
+				<div class="products">
+					<div class="product">
+						<div class="free">Free</div>
+						<div class="new"><img src="img/buoi3.2.jpg" alt=""></div>
+						<div class="title"><h3>My Product</h3></div>
+						<div class="mota">Sản phẩm của chúng tôi</div>
+						<input class="buy" type="submit" value="Mua ngay"></input>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+	
+</body>
+</html>

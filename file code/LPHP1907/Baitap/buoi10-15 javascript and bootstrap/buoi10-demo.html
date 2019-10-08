@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> DOM in Javascript</title>
+	<link rel="stylesheet" href="js/jquery-ui.min.css">
+</head>
+<body>
+	<!-- demo buổi 10--> 
+<!--  -->
+<form action="#" id="dangky">
+<table>
+	<tr>
+		<td>Họ tên</td>
+		<td><input type="text" id="fullname" onkeypress="" onchange="alert('sự kiện trong JS');"></td>
+	</tr>
+	<tr>
+		<td>Email</td>
+		<td><input type="text" name="email" onfocus="check_fullname();"></td>
+	</tr>
+	<tr>
+		<td>ngày tháng năm</td>
+		<td><input type="datetime-local" name="datetime"></td>
+	</tr>
+	<tr>
+		<td>ngày tháng năm sử dụng jquery</td>
+		<td><input type="text" id ="datepicker-old" ></td>
+	</tr>
+	<tr>
+		<td>ngày tháng năm sử dụng jquery 2</td>
+		<td><input type="text" id ="datepicker-new" ></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<button type="buttton" onclick="alert('Bạn vừa click và node');">Đăng kí</button>
+			<button type="reset" onreset="alert('Bạn có chắc chắn muốn reset ko?');">Reset</button>
+		</td>
+		
+	</tr>
+</table>
+</form>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		// datepicker - jquery
+		$(document).ready(function(){
+			$('#datepicker-old').datepicker({
+				dateFormat: "dd-mm-yy", 
+				changeMonth: true,
+				changeYear: true,
+			});
+		});
+		$(document).ready(function(){
+			$('#datepicker-new').datepicker({
+		 		dateFormat: "dd-mm-yy",
+		 		changeMonth: true,
+		 		changeYear: true,
+		 	});
+			
+
+		 });
+		// check-fullname
+		function check_fullname()
+		{
+			var fullname = document.getElementById('fullname').value;
+			if(fullname.trim() ==='')
+			{
+				confirm('Vui lòng nhập đầy đủ họ tên'); 
+
+				return false;
+			}
+			return true;
+		}
+
+	</script>
+
+
+</body>
+</html>

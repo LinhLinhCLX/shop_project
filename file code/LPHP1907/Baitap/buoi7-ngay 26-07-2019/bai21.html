@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bài 21</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- bai21 -->
+	<div class="box">
+		<h3>Bài 21</h3>
+		<form action="#">
+			<p>Số kí tự được nhập vào: <input type="text" id="Sokytu"><br></p>
+			<p>Nhập vào đây: </p>
+			<textarea id="Noidung" cols="30" rows="10" onkeyup="bai21();"> </textarea>
+		</form>
+		<script type="text/javascript">
+			function bai21()
+			{
+				var noidung = document.getElementById("Noidung");
+				var sokytu = document.getElementById("Sokytu");
+
+				if(noidung.value.length > 200)
+					alert("Bạn gõ quá nhiều kí tự");
+				sokytu.value=noidung.value.length;
+			}
+		</script>
+	</div>
+</body>
+</html>

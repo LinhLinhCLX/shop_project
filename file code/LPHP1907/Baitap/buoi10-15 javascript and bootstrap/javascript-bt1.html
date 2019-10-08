@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bài tập về nhà về JavaScript</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		*{
+			margin:0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		.box{
+			width: 800px;
+			height: 100px;
+			background-color: lightblue;
+			margin: 10px auto;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		
+	</header>
+	<main>
+		<div class="bai1 box">
+			<form action="#">
+				<p>1: <input type="radio" name ="radio" value="Bạn đã chọn số 1" onclick="alert(value)"></p>
+				<p>2: <input type="radio" name ="radio" value="Bạn đã chọn số 2" onclick="alert(value)"></p>
+				<p>3: <input type="radio" name ="radio" value="Bạn đã chọn số 3" onclick="alert(value)"></p>
+			</form>
+		</div>
+		<div class="bai2 box">
+			<h2>Button Alert</h2>
+			<p>Push this button to make a message appear</p>
+			<form action="#">
+				<input type="button" value="Message" onclick="alert(!Xin chào bạn!); return true;">
+			</form>
+			
+		</div>
+		<div class="bai3 box">
+			<h2>Chào tạm biệt</h2>
+			
+			<form action="#">
+				<input type="button" value="Back" onclick="history.go(-1)">
+			</form>
+			<p>Click the back to see the Example!!</p>
+		</div>
+		<div class="bai4 box">
+			<script type="text/javascript" charset="utf-8">
+				function HoiDap()
+				{
+					question = confirm("Bạn muốn đến trang Facebook không?")
+					if(question !="0")
+					{
+						top.location = "https://www.facebook.com/"
+					}
+				}
+			</script>
+			<a href="" onclick="HoiDap(); return false;">Facebook</a>
+
+		</div>
+		<div class="bai5 box">
+			
+			<form action="#">
+				<p>
+					<input type="text" size="4" value="12" name = "a">
+					<input type="button" value = "+" onclick= "plus(this.form)">
+					<input type="button" value = "-" onclick= "minus(this.form)">
+					<input type="button" value = "*" onclick= "times(this.form)">
+					<input type="button" value = "/" onclick= "div(this.form)">
+					<input type="button" value = "^" onclick= "pow(this.form)">
+					<input type="text" size="4" value="12" name = "b"> = 
+					<input type="text" size="4" value="0" name = "ans" size="9">
+				</p>
+			</form>
+			<script type="text/javascript" charset="utf-8">
+				function plus(form)
+				{
+					a=eval(form.a.value)
+					b=eval(form.b.value)
+					c = a+b
+					form.ans.value = c
+				}
+				function minus(form)
+				{
+					a=eval(form.a.value)
+					b=eval(form.b.value)
+					c = a-b
+					form.ans.value = c
+				}
+				function times(form)
+				{
+					a=eval(form.a.value)
+					b=eval(form.b.value)
+					c = a*b
+					form.ans.value = c
+				}
+				function div(form)
+				{
+					a=eval(form.a.value)
+					b=eval(form.b.value)
+					c = a/b
+					form.ans.value = c
+				}
+				function pow(form)
+				{
+					a=eval(form.a.value)
+					b=eval(form.b.value)
+					c = Math.pow(a,b)
+					form.ans.value = c
+				}
+			</script>
+		</div>
+		<div class="bai6 box">
+			<h2>Bài 6: tạo lịch</h2>
+			
+		</div>
+		<div class="bai7 box">
+			<script type="text/javascript" charset="utf-8">
+				function mailsome1()
+				{
+					who=prompt("Enter recipientỊs email address: ","antispammer@earthling.net");
+					what=prompt("Enter the subject: ","none");
+					if (confirm("Are you sure you want to mail "+who+" with the subject of "+what+"?")==true){
+					parent.location.href=Ịmailto:Ị+who+Ị?subject=Ị+what+ỊỊ;
+					}
+				}
+			</script>
+			<a href="!javascript:mailsome1()!">Email Someone!</a>
+			<form action="#" accept-charset="utf-8">
+				<input type="button" value = "Email Someone!" onclick="mailsome1()">
+			</form>
+
+		</div>
+	</main>
+	<footer>
+		
+	</footer>
+	<script type="text/javascript" charset="utf-8">
+		
+
+
+	</script>
+</body>
+</html>

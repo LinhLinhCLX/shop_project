@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bài tập về nhà về JavaScript</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		*{
+			margin:0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		.box{
+			width: 800px;
+			height: 100px;
+			background-color: lightblue;
+			margin: 10px auto;
+		}
+		.box2{
+			width: 800px;
+			height: 100px;
+			background-color: pink;
+			margin: 10px auto;
+		}
+	</style>
+</head>
+<body>
+<header>
+		
+</header>
+<main>
+	<!----> 
+	<div class="bai1 box">
+		<script>
+			var name, age;
+			name = prompt("Nhận tên vào đây", "");
+			age = prompt("Nhập tuổi vào đây", 20);
+			document.write("Chào bạn: <b> "+name+"<br>");
+			document.write("Bạn "+ age +" tuổi.<br>");
+		</script>
+	</div> 
+	<!-- bai2 
+	<div class="box2">
+		<form name = "bai2">
+			<h3>Bài 2: Tạo nút Button bằng JavaScript</h3>
+			<script type="text/javascript">
+				document.write("<input type=\"button\" id=\"bai2\" value =\"Welcome\" onclick =\"alert(document.bai2.bai2.value)\" >");
+			</script>
+			
+		</form>
+	</div>-->
+	<!-- bai3 
+	<div class="box">
+		<h3>Bài 3</h3>
+		<input type="button" name= "welcome-bai3" value="Welcome" onclick="alert('Welcome to JavaScript-bai3');">
+	</div>-->
+	<!-- bai4 
+	<div class="box2">
+		<form name="bai4">
+			<h3>Bài 4</h3>
+			<input type="button" name= "welcome-bai4" value = "Welcome" onclick = "alert(document.bai4.msg.value)">
+	 		<input type = text name = msg value = "Welcome to JavaScript-bai4" size = 30>
+		</form>
+		
+ 
+	</div>-->
+	<!-- bai5 
+	<div class="box">
+		<form name="bai5">
+			<h3>Bài 5</h3>
+			<input type="text" name="cost"><br>
+			<input type="button" value ="OK" onclick='alert(document.bai5.cost.value)'>
+		</form>
+ 
+	</div>-->
+	<!-- bai6 
+	<div class="box2">
+		<h3>Bài 6</h3>
+		<script type ="text/javascript">
+			var date = new Date();
+			confirm( "Hiện tại là " + date.getHours()+ " Giờ "+date.getMinutes()+" phút.bài 6");
+			document.write( "Hiện tại là " + date.getHours()+ " Giờ "+date.getMinutes()+" phút. Hiển thị bằng hàm confirm();");
+		</script>
+	</div>-->
+	<!-- bai7
+	<div class="box">
+		<h3>Bài 7</h3>
+		<script type ="text/javascript">
+			var date = new Date();
+			document.title = " " + date.getHours().+ " Giờ "+date.getMinutes()+" phút.";
+			document.write( "Hiện tại là " + date.getHours()+ " Giờ "+date.getMinutes()+" phút năm "+ date.getYear()+". và hiện thị trên title");
+
+		</script>
+	</div> -->
+	<!-- bai8 
+	<div class="box2">
+		<h3>Bài 8</h3>
+		<script type="text/javascript">
+			var date = new Date();
+			var namhientai = date.getYear();
+			var namsinh = prompt("Bạn sinh năm bao nhiêu? ", "");
+			alert("Tuổi bạn bây giờ là: "+(namhientai - namsinh));
+		</script>
+	</div>-->
+	<!-- bai9
+	<div class="box">
+		<h3>Bài 9</h3>
+		<script type="text/javascript">
+			var date = new Date();
+			var namhientai = date.getYear();
+			do{
+				var namsinh = prompt("Bạn sinh năm bao nhiêu? ", "");
+
+			}while(parseInt(namsinh)>namhientai);
+			
+			alert("Tuổi bạn bây giờ là: "+(namhientai - namsinh));
+		</script>
+	</div> -->
+	<!-- bai10 
+	<div class="box2">
+		<h3>Bài 10</h3>
+		<script type="text/javascript">
+			var choose;
+			choose = prompt("Hãy chọn 1 số từ 1 đến 3 để mở một trang web ");
+			switch(choose)
+			{
+				case "1": 
+					window.open("https://youtube.com");
+					break;
+				case "2": 
+					window.open("https://printest.com");
+					break;
+				case "3": 
+					window.open("https://Facebook.com");
+					break;
+				default: window.open("https://google.com.vn").
+			}
+		</script>
+	</div>-->
+	<!-- bai11 
+	<div class="box">
+		<h3>Bài 11</h3>
+		<script type="text/javascript">
+			var number, x;
+			var ds = new Array(100);
+			number = prompt("Nhập số người: ", 3);
+			for (var i = 0; i < soluong; i++) 
+			{
+				ds[i] = prompt("Nhập tên: ", "");
+			}
+			ds.sort();
+			document.write("<br><h3>Danh sách đã sắp xếp là: </h3>");
+			for(x in ds)
+			{
+				document.write(ds[x] +"<br>");
+			}
+		</script>
+	</div>-->
+	<!-- bai12 
+	<div class="box2">
+		<h3>Bài 12</h3>
+		<input type="button" name="DangKy" value="Đăng ký" onClick="alert('Dang ky E-Mail'); ">
+		<script type="text/javascript">
+			
+		</script>
+	</div>-->
+	<!-- bai13 -->
+	<div class="box">
+		<h3>Bài 13</h3>
+		<input type ="button" name="ThayMauNen" value = "Thay đổi màu nền" onclick = "document.bgColor = 'blue' ">
+		<script type="text/javascript">
+			
+		</script>
+	</div>
+	<!-- bai14 
+	<div class="box2">
+		<h3>Bài 14</h3>
+		<form name = "bai14">
+			<INPUT type="text" name="HoTen" >
+ 			<INPUT type="button" name="HienThi" value="Hiển thị" onclick="alert(document.bai14.HoTen.value); ">
+		</form>
+		
+ 		<script type="text/javascript">
+		</script>
+	</div>-->
+	<!-- bai15 
+	<div class="box">
+		<h3>Bài 15</h3>
+		<script type="text/javascript">
+			
+			<form action="#">
+				<p>
+					<input type="text" size="4" value="12" name = "a">
+					<input type="button" value = "+" onclick= "plus(this.form)">
+					<input type="button" value = "-" onclick= "minus(this.form)">
+					<input type="button" value = "*" onclick= "times(this.form)">
+					<input type="button" value = "/" onclick= "div(this.form)">
+					<input type="button" value = "^" onclick= "pow(this.form)">
+					<input type="text" size="4" value="12" name = "b"> = 
+					<input type="text" size="4" value="0" name = "ans" size="9">
+				</p>
+			</form>
+			<script type="text/javascript" charset="utf-8">
+				function plus(form)
+				{
+					a=eval(form.a.value)
+					b=eval(form.b.value)
+					c = a+b
+					form.ans.value = c
+				}
+				function minus(form)
+				{
+					a=eval(form.a.value)
+					b=eval(form.b.value)
+					c = a-b
+					form.ans.value = c
+				}
+				function times(form)
+				{
+					a=eval(form.a.value)
+					b=eval(form.b.value)
+					c = a*b
+					form.ans.value = c
+				}
+				function div(form)
+				{
+					a=eval(form.a.value)
+					b=eval(form.b.value)
+					c = a/b
+					form.ans.value = c
+				}
+				function pow(form)
+				{
+					a=eval(form.a.value)
+					b=eval(form.b.value)
+					c = Math.pow(a,b)
+					form.ans.value = c
+				}
+			</script>
+		</script>
+	</div>-->
+	<!-- bai16 -->
+	<div class="box2">
+		<script type="text/javascript">
+			function bai16(){
+				document.TieuDe.value;
+				document.bgColor = MauNen.value;
+				document.fgColor = MauChu.value;
+				window.dedefaultStatus = TrangThai.value;
+			}
+		</script>
+		<h3>Bài 16</h3>
+		<input type="text" name="TieuDe" value="Tiêu đề mới">
+ 		<input type="text" name="MauNen" value="Nhập màu (ví dụ blue)"> <BR>
+ 		<input type="text" name="MauChu" value="Nhập màu chữ  (ví dụ white)">
+ 		<input type="text" name="TrangThai" value="Nhập dòng trạng thái "> <BR>
+ 		<input type="button" name ="ThayDoi" value="Thay đổi" onclick="bai16();">
+ 
+		
+	</div>
+	<!-- bai17 
+	<div class="box">
+		<h3>Bài 17</h3>
+		<input type="button" value="Thu" onclick="document.title='Bạn đã click chuột' ">
+		<script type="text/javascript">
+			
+		</script>
+	</div>-->
+	<!-- bai18
+	<div class="box2">
+		<h3>Bài 18</h3>
+		<input type="button" value="Gui" onclick="alert( 'Ban da click chuot vao nut') ">
+ 		<input type="text" onclick = "alert('Ban da click chuot vao textbox') ">
+	</div> -->
+	<!-- bai19 -->
+	<div class="box">
+		<h3>Bài 19</h3>
+		<input type="button" value="Xanh" onclick="window.document.bgColor = 'blue'; ">
+ 		<input type = "button" value ="Đỏ" onclick="window.document.bgColor = 'red'; ">
+ 
+		<script type="text/javascript">
+			
+		</script>
+	</div>
+	<!-- bai20 -->
+	<div class="box2">
+		<h3>Bài 20 Bạn hãy chọn màu nền </h3>
+		<Select name = "Mau" onchange = "bai20();" >
+		 	<option value = "red"> Màu đỏ </option>
+		 	<option value = "blue"> Màu xanh </option>
+		 	<option value = "brown"> Màu nâu </option>
+		 	<option value = "lavender"> Màu xanh nhạt</option>
+		</select>
+		<script type="text/javascript">
+			function bai20()
+			{
+				window.document.bgColor = Mau.value;
+			}
+		</script>
+	</div>
+	<!-- bai21 -->
+	<div class="box">
+		<h3>Bài 21</h3>
+		<input type="text" name="sokytu"><br>
+		<textarea name="noidung" cols="20" rows="4" onkeyup="bai21();"> </textarea>
+		<script type="text/javascript">
+			function bai21()
+			{
+				if(noidung.value.length > 200)
+					alert("Bạn gõ quá nhiều kí tự");
+				sokytu.value=noidung.value.length;
+			}
+		</script>
+	</div>
+	<!-- bai22 -->
+	<div class="box2">
+		<h3>Bài 22</h3>
+		<input type="button" value="Gửi" onmousemove="window.status = 'Chuột trong nút'; ">
+ 		<input onMouseMove ="window.status='Chuột trong textbox';"> <BR>
+ 		<input type="radio" name="GioiTinh" onMouseMove="window.status='Trong nam';">Nam </option>
+ 		<input type="radio" name="GioiTinh" onMouseMove="window.status='Trong nữ';"> Nữ </option>
+ 
+		<script type="text/javascript">
+			
+		</script>
+	</div>
+	<!-- bai23 -->
+	<div class="box">
+		<h3>Bài 23</h3>
+		<form action="#" name="bai23">
+			Số lượng: <input name="SoLuong">
+	 		Đơn giá:<input name="DonGia" onKeyUp="ThanhTien.value=SoLuong.value*DonGia.value"> <HR>
+	 		Thành tiền:<input name="ThanhTien"> USD
+		</form> 
+		<script type="text/javascript">
+			
+		</script>
+	</div>
+	<!-- bai24 -->
+	<div class="box2">
+		<h3>Bài 24</h3>
+		Số lượng: <input name="SoLuong">
+ 		Đơn giá: <input name="DonGia" onKeyUp="TinhToan();"> <HR>
+ 		Thành tiền: <input name="ThanhTien"> USD
+		<script type="text/javascript">
+			function TinhToan()
+ 			{
+ 				ThanhTien.value=SoLuong.value*DonGia.value ;
+				 // Hoặc bạn viết đầy đủ là:
+				 // window.ThanhTien.value = window.SoLuong.value*window.DonGia.value
+ }
+		</script>
+	</div>
+	<!-- bai25 -->
+	<div class="box">
+		<h3>Bài 25: form đăng nhập</h3>
+		<script type="text/javascript">
+			
+		</script>
+	</div>
+	<!-- bai26 -->
+	<div class="box2">
+		<h3>Bài 26</h3>
+		<p style="font-family:arial; font-style:italic; font-size:16pt">Chào bạn! </p>
+ 
+		<script type="text/javascript">
+			
+		</script>
+	</div>
+	<!-- bai27 -->
+	<div class="box">
+		<h3>Bài 27</h3>
+		<input type = "text" style = "background-color:magenta">
+		<script type="text/javascript">
+			
+		</script>
+	</div>
+	<!-- bai28 -->
+	<div class="box2">
+		<h3>Bài 28</h3>
+		
+			<input style = "background-image:url('anh2.jpg');background-repeat:repeat-x; width:100%">
+ 			<p>
+ 			<textarea style = "background-image:url('anh3.jpg');background-repeat:repeat-y" cols = "80" rows = "5">
+ 			</textarea>
+ 		<script type="text/javascript">	
+		</script>
+	</div>
+	<!-- bai29 -->
+	<div class="box">
+		<h3>Bài 29</h3>
+		<script type="text/javascript">
+			<font style ="cursor:hand;color:blue" onclick="window.open('https://quantrimang.com');">Trang chủ </font> QTM
+ 
+		</script>
+	</div>
+
+	<!-- bai30 -->
+	<div class="box2">
+		<h3>Bài 30</h3>
+		<h4 id= "LienKet" STYLE="background-color:blue; color:white"
+ onMouseMove="document.all.LienKet.style.backgroundColor = 'red'"> Website công nghệ https://quantrimang.com/</h4>
+	</div>
+
+</main>
+<footer>
+	
+</footer>
+</body>
+</html>

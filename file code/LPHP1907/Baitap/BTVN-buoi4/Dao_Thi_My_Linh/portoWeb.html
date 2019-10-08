@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Porto website</title>
+	
+	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="portoWeb.css">
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"> -->
+</head>
+<body>
+	<header id="header" class="">
+		<div class="header-main">
+			<div class="header">
+				<div class="header-number">
+					<span class="last">
+						<a href="#"><i class="fas fa-search"></i></a>
+						<a href="#"><i class="fas fa-shopping-bag"></i></a>
+						
+					</span>
+					<span><a href="#"><i class="fas fa-phone"></i> (123) 456-7890</a></span>
+					<span><a href="#"><i class="fas fa-angle-right"></i>  Contact Us</a></span>
+					<span><a href="#"><i class="fas fa-angle-right"></i>  About Us</a></span>
+
+				</div>
+				<div class="header-menu">
+					<div class="header-menu1">
+						<div class="header-menu-icon">
+							<span><a href="#" class="icon"><i class="fab fa-facebook facebook first"></i></a></span>
+							<span><a href="#" class="icon"><i class="fab fa-twitter twitter"></i></a></span>
+							<span><a href="#" class="icon"><i class="fab fa-linkedin-in linkedin"></i></a></span>
+						</div>
+						<div class="header-menu-menu">
+							<ul>
+								<li class = "header-menu-home"><a href="#">HOME</a></li>
+								<li><a href="#">ELEMENT</a>
+									<div class="all-menu">
+										<ul>
+											<li class="font-bold">ELEMEMT1</li>
+											<li>content</li>
+											<li>content</li>
+											<li>content</li>
+											<li>content</li>
+											<li>content</li>
+											<li>content</li>
+											<li>content</li>
+											<li>content</li>
+										</ul>
+										<ul>
+											<li class="font-bold">ELEMEMT1</li>
+											<li>content</li>
+											<li>content</li>
+											<li>content</li>
+											<li>content</li>
+											<li>content</li>
+											<li>content</li>
+											<li>content</li>
+											<li>content</li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">FEATURES</a></li>
+								<li><a href="#">PAGES</a></li>
+								<li><a href="#">BLOG</a></li>
+								<li><a href="#">PORTFOLIO</a></li>
+								<li><a href="#" class="last">BUY PORTO!</a></li>
+							</ul>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+			<div class="header-logo">
+				<img src="img/header-logo1.png" alt="" height="115px" width="120px">
+			</div>
+		</div>
+		
+</header><!-- /header -->
+<main id="main">
+	
+	<div class="box1">
+		<div class="slideshow-container">
+
+		<div class="mySlides fade">
+		  <img src="img/slide1.png" width = "100%" height="100%">
+		</div>
+
+		<div class="mySlides fade">
+		  <img src="img/slide2.png" width = "100%" height="100%">
+		</div>
+
+		<div class="mySlides fade">
+		  <img src="img/slide1.png" width = "100%" height="100%">
+		</div>
+
+		</div>
+		<br>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+		<script>
+			var slideIndex = 0;
+			showSlides();
+
+			function showSlides() {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  for (i = 0; i < slides.length; i++) {
+			    slides[i].style.display = "none";  
+			  }
+			  slideIndex++;
+			  if (slideIndex > slides.length) {slideIndex = 1}    
+			  for (i = 0; i < dots.length; i++) {
+			    dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			  setTimeout(showSlides, 2000); // Change image every 2 seconds
+			}
+			//click slideshow
+			// var slideIndex = 1;
+			// showSlides(slideIndex);
+
+			// function plusSlides(n) {
+			//   showSlides(slideIndex += n);
+			// }
+
+			// function currentSlide(n) {
+			//   showSlides(slideIndex = n);
+			// }
+
+			// function showSlides(n) {
+			//   var i;
+			//   var slides = document.getElementsByClassName("mySlides");
+			//   var dots = document.getElementsByClassName("dot");
+			//   if (n > slides.length) {slideIndex = 1}    
+			//   if (n < 1) {slideIndex = slides.length}
+			//   for (i = 0; i < slides.length; i++) {
+			//       slides[i].style.display = "none";  
+			//   }
+			//   for (i = 0; i < dots.length; i++) {
+			//       dots[i].className = dots[i].className.replace(" active", "");
+			//   }
+			//   slides[slideIndex-1].style.display = "block";  
+			//   dots[slideIndex-1].className += " active";
+			//}
+		</script>
+	</div>
+	<div class="box2">
+		<div class="box2-main">
+			<div class="box2-link">
+				<span class="box2-getStart">Get Started Now</span> 
+				<span class="box2-text-1">or</span> 
+				<a href="#">learn more. </a>
+			</div>
+			<div class="box2-main1">
+				<div class="box2-heading">
+					<h2>The Fastest way to grow your business with the leader in <em class="box2-heading-tech">Technology</em></h2>
+					
+				</div>
+				<div class="box2-text">
+					<span class="box2-text-1">Check out our options and features included</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="box3 box">
+		<div class="box3-main">
+			<div class="box3-heading1">
+				Porto is <span> extremely </span> beautiful and fully responive.
+			</div>
+			<div class="box3-pana">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum, nulla vel pellentesque consequat, ante nulla hendrerit arcu, ac tincidunt mauris lacus sed leo.
+			</div>
+		</div>
+		
+	</div>
+	<div class="box4 box">
+		<img src="img/panel1.png" alt="" height="100%" width="100%">
+	</div>
+	<div class="box box5">
+		<div class="box-main">
+			
+			<div class="box5-block1">
+				<h2>and more...</h2>
+				<div class="box5-block1-row1">
+					<h3><a href="#"><i class="fas fa-gem"></i></a> Creative Website</h3>
+					<div class="box5-block1-row1-text">
+						<div class="box5-block1-row1-pana">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blanorem ipsum dolor sit amet, consecte.
+						</div>
+						<div class="box5-block1-row1-pana">
+							Adipiscing elit phasellus blanit ma…
+						</div>
+						<div class="box5-block1-row1-link">
+							read more <span><i class="fas fa-angle-right"></i></span>
+						</div>
+					</div>
+					
+				</div>
+				<div class="box5-block1-row1">
+					<h3><a href="#"><i class="far fa-comment"></i></a> Contact Forms</h3>
+				</div>
+				<div class="box5-block1-row1">
+					<h3><a href="#"><i class="fab fa-microsoft"></i></a> Portfolio Pages</h3>
+				</div>
+			</div>
+			<div class="box5-block2">
+				<h2>Our <strong>Features</strong></h2>
+				<div class="box5-block2-col">
+					<!-- new1 -->
+					<div class="box5-block2-news">
+						<div class="box5-block2-new-icon">
+							<a href="#">
+								<i class="fas fa-bullseye"></i>
+							</a>
+						</div>
+						<div class="box5-block2-new">
+							<h3 class="box5-block2-new-heading">
+								Customer Support
+							</h3>
+							<div class="box5-block2-new-pana">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa
+							</div>
+						</div>
+								
+					</div>
+					<!-- new2 -->
+					<div class="box5-block2-news">
+						<div class="box5-block2-new-icon">
+							<a href="#"><i class="fas fa-layer-group"></i></a>
+						</div>
+						<div class="box5-block2-new">
+							<h3 class="box5-block2-new-heading">
+								Sliders
+							</h3>
+							<div class="box5-block2-new-pana">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa
+							</div>
+						</div>
+								
+					</div>
+					<!-- new3 -->
+					<div class="box5-block2-news">
+						<div class="box5-block2-new-icon">
+							<a href="#"><i class="far fa-file"></i></a>
+						</div>
+						<div class="box5-block2-new">
+							<h3 class="box5-block2-new-heading">
+								HTML5/CSS3/JS
+							</h3>
+							<div class="box5-block2-new-pana">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa
+							</div>
+						</div>
+								
+					</div>
+					<!-- new4 -->
+					<div class="box5-block2-news">
+						<div class="box5-block2-new-icon">
+							<a href="#"><i class="far fa-user"></i></a>
+						</div>
+						<div class="box5-block2-new">
+							<h3 class="box5-block2-new-heading">
+								Icon
+							</h3>
+							<div class="box5-block2-new-pana">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa
+							</div>
+						</div>		
+					</div>
+				</div>
+				<!-- col -->
+				<div class="box5-block2-col">
+					<!-- new5 -->
+					<div class="box5-block2-news">
+						<div class="box5-block2-new-icon">
+							<a href="#"><i class="fab fa-google"></i></a>
+						</div>
+						<div class="box5-block2-new">
+							<h3 class="box5-block2-new-heading">
+								500+ Google Fonts
+							</h3>
+							<div class="box5-block2-new-pana">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa
+							</div>
+						</div>
+								
+					</div>
+					<!-- new6 -->
+					<div class="box5-block2-news">
+						<div class="box5-block2-new-icon">
+							<a href="#"><i class="fas fa-bars"></i></a>
+						</div>
+						<div class="box5-block2-new">
+							<h3 class="box5-block2-new-heading">
+								Buttons
+							</h3>
+							<div class="box5-block2-new-pana">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa
+							</div>
+						</div>
+								
+					</div>
+					<!-- new7 -->
+					<div class="box5-block2-news">
+						<div class="box5-block2-new-icon">
+							<a href="#"><i class="fas fa-pencil-alt"></i></a>
+						</div>
+						<div class="box5-block2-new">
+							<h3 class="box5-block2-new-heading">
+								Colors
+							</h3>
+							<div class="box5-block2-new-pana">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa
+							</div>
+						</div>
+								
+					</div>
+					<!-- new8 -->
+					<div class="box5-block2-news">
+						<div class="box5-block2-new-icon">
+							<a href="#"><i class="fas fa-desktop"></i></a>
+						</div>
+						<div class="box5-block2-new">
+							<h3 class="box5-block2-new-heading">
+								Lightbox
+							</h3>
+							<div class="box5-block2-new-pana">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa
+							</div>
+						</div>
+								
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="box3 box">
+		<div class="box3-main">
+			<div class="box3-heading1">
+				We're not the only ones <span> happy </span> about Porto WordPress Theme...
+			</div>
+			<div class="box3-font-blue">
+				20,000 CUSTOMERS IN 100 COUNTRIES USE PORTO TEMPLATE. MEET OUR CUSTOMERS.
+			</div>
+		</div>
+		
+	</div>
+	<div class="box6 box">
+		<div class="box6-main">
+			<h1>Slideshow cho bang tin</h1>
+		</div>
+		
+	</div>
+	
+</main>
+	
+<footer id="footer">
+<div class="footer-main">
+	<div class="footer-block1">
+		<h2>Get In Touch</h2>
+		<div class="footer-block1-table">
+			<div class="footer-col">
+				<div class="footer-col-heading">
+					NEWSLETTER
+				</div>
+				<div class="footer-col-content">
+					<div class="footer-content-pana">
+						Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.
+					</div>
+					<form action="#">
+						<input type="text" class="email" height="40px" width="250px" placeholder="Email Address...">
+						<input type="button" class="email" height="40px" width="30px" value="GO!">
+					</form>
+				</div>
+			</div>
+			<div class="footer-col">
+				<div class="footer-col-heading">
+					LATEST TWEETS
+				</div>
+				<div class="footer-col-content">
+					<div class="footer-content-news">
+						<div class="footer-content-news-icon"><i class="fab fa-twitter"></i></div>
+						<div class="footer-content-news-text">
+							<div class="footer-content-news-text1">
+								Annual big sale is now live! Please check our mega march campaign for Porto wordpress theme! https://t.co/hantQ1Ipde
+							</div>
+							<div class="footer-content-news-text2">
+								09:38 AM Mar 25th
+							</div>
+						</div>
+					</div>
+					<div class="footer-content-news">
+						<div class="footer-content-news-icon"><i class="fab fa-twitter"></i></div>
+						<div class="footer-content-news-text">
+							<div class="footer-content-news-text1">
+								500+ themes and templates are now 50% off! Do not miss this annual big oppotunity! https://t.co/fMlzCPzwEO
+							</div>
+							<div class="footer-content-news-text2">
+								04:08 AM Nov 20th
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-col">
+				<div class="footer-col-heading">
+					CONTACT US
+				</div>
+				<div class="footer-col-content">
+					<div class="footer-content-news">
+						<div class="footer-content-news-icon"><i class="fas fa-dot-circle"></i></div>
+						<div class="footer-content-news-text">
+							<div class="footer-content-news-text1">
+								 Address: 1234 Street Name, City Name, United States
+							</div>
+						</div>
+					</div>
+					<div class="footer-content-news">
+						<div class="footer-content-news-icon">
+							<i class="far fa-comment"></i>
+						</div>
+						<div class="footer-content-news-text">
+							<div class="footer-content-news-text1">
+								 Phone: (123) 456-7890
+							</div>
+						</div>
+					</div>
+					<div class="footer-content-news">
+						<div class="footer-content-news-icon">
+							<i class="far fa-envelope"></i>
+						</div>
+						<div class="footer-content-news-text">
+							<div class="footer-content-news-text1">
+								 Email: mail@example.com
+							</div>
+						</div>
+					</div>
+					<div class="footer-content-news">
+						<div class="footer-content-news-icon">
+							<i class="far fa-clock"></i>
+						</div>
+						<div class="footer-content-news-text">
+							<div class="footer-content-news-text1">
+								 Working Days/Hours: Mon - Sun / 9:00 AM - 8:00 PM
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-col">
+				<div class="footer-col-heading">
+					FOLLOW US
+				</div>
+				<div class="footer-col-content">
+					<div class="footer-menu-icon">
+						<span><a href="#" class="icon"><i class="fab fa-facebook facebook first"></i></a></span>
+						<span><a href="#" class="icon"><i class="fab fa-twitter twitter"></i></a></span>
+						<span><a href="#" class="icon"><i class="fab fa-linkedin-in linkedin"></i></a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer-main2">
+	<div class="footer-block2">
+		<div class="footer-block2-table">
+			<div class="footer-block2-col">
+				<img src="img/header-logo.png" alt="" height="80px" width="120px">
+			</div>
+			<div class="footer-block2-col">
+				<div class="footer-block2-text">
+					© Copyright 2019. All Rights Reserved.
+				</div>
+			</div>
+			<div class="footer-block2-col">
+				<div class="footer-block2-text2">
+					<span><a href="#"><i class="fas fa-angle-right"></i>  Sitemap</a></span>
+					<span><a href="#"><i class="fas fa-angle-right"></i>  Contact</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</footer>
+</body>
+</html>

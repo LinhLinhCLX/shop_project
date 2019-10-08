@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Demo JSON</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<table border="2" style="padding: 10px;">
+		<thead>
+			<tr>
+				<td>Họ tên</td>
+				<td>Ngày sinh</td>
+				<td>Địa chỉ</td>
+				<td>Lớp học</td>
+			</tr>
+		</thead>
+		<tbody id="content-sinh-vien">
+			
+		</tbody>
+
+	</table>
+	<script type="text/javascript">
+		var list_sinhvien=[{
+			"hoten":"Nguyễn A",
+			"ngaysinh":"19-06-1996",
+			"diachi":"Hà nội",
+			"lop":"LPHP1907e"
+		},
+		{
+			"hoten":"Trần B",
+			"ngaysinh":"19-06-1996",
+			"diachi":"Hà nội",
+			"lop":"LPHP1907e"
+		},
+		{
+			"hoten":"Phạm C",
+			"ngaysinh":"19-01-1997",
+			"diachi":"Hà Giang",
+			"lop":"LPHP1907e"
+		},
+		{
+			"hoten":"Nguyễn A",
+			"ngaysinh":"19-06-1998",
+			"diachi":"Nam Định",
+			"lop":"LPHP1907e"
+		}];
+	</script>
+	<script>
+		var content_table = document.getElementById("content-sinh-vien");
+		var html_sinhvien=[];
+		for (var i = 0; i < list_sinhvien.length; i++) {
+			var sinhvien = list_sinhvien[i];
+			var string_html = `<tr>
+				<td>${sinhvien.hoten}</td>
+				<td>${sinhvien.ngaysinh}</td>
+				<td>${sinhvien.diachi}</td>
+				<td>${sinhvien.lop}</td>
+					</tr>`;
+			html_sinhvien.push(string_html);
+		}
+		content_table.innerHTML = html_sinhvien.join("");
+
+	</script>
+	//AJAX có chức năng lấy về một chuỗi
+	<script type="text/javascript">
+		//1. Để sử dụng AJAX thì chúng ta phải định nghĩa một đường link mà server gửi dữ liệu về
+		var url;
+
+		//2. Định nghĩa một biến xhttp
+		// ?XMLHttpRequest() là gì? và phương thức của đối tượng này là gì? có chức năng làm công việc gì?
+		// 
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			
+		};
+		xhttp.open("GET", url, true);
+		xhttp.send();
+	</script>
+	
+	
+
+</body>
+</html>

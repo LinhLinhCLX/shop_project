@@ -1,0 +1,116 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bài 1</title>
+	<style type="text/css" media="screen">
+		*{
+			margin:0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		
+		.baitap{
+			width: 800px;
+			height: 100px;
+			background-color: pink;
+			margin: 10px auto;
+		}
+	</style>
+</head>
+<body>
+	<!-- bai1
+	<div class="baitap">
+		<h3>bài 1</h3>
+		<script type ="text/javascript">
+			var date = new Date();
+			var thu = date.getDay()+1;
+			var ngay = date.getDate();
+			var thang = date.getMonth()+1;
+			var nam = date.getFullYear();
+			alert( "Hôm nay là thứ " + thu+ " ngày "+ngay+" tháng "+thang+ " năm "+nam);
+			document.write("Hôm nay là thứ " + thu+ " ngày "+ngay+" tháng "+thang+ " năm "+nam);
+		</script>
+	</div> -->
+	<!-- bai2 
+	<div class="baitap">
+		<h3>bài 2</h3>
+		<script type ="text/javascript">
+			var date = new Date();
+			var thu = date.getDay()+1;
+			var ngay = date.getDate();
+			var thang = date.getMonth()+1;
+			var nam = date.getFullYear();
+			document.title="Hôm nay là thứ " + thu+ " ngày "+ngay+" tháng "+thang+ " năm "+nam;
+		</script>
+	</div>-->
+	<!-- bai3
+	<div class="baitap">
+		<h3>bài 3</h3>
+		<script type ="text/javascript">
+			var date = new Date();
+			var namhientai = date.getFullYear();
+			var namsinh = prompt("Bạn sinh năm bao nhiêu? ", "");
+			alert("Tuổi bạn bây giờ là: "+(namhientai - namsinh));
+		</script>
+	</div> -->
+	<!-- bai4 
+	<div class="baitap">
+		<h3>bài 4</h3>
+		<script type ="text/javascript">
+			var date = new Date();
+			var namsinh;
+			var namhientai = date.getFullYear();
+			do{
+				namsinh = prompt("Bạn sinh năm bao nhiêu? ", "");
+			}while(parseInt(namsinh)>namhientai);
+			alert("Tuổi bạn bây giờ là: "+(namhientai - namsinh));
+		</script>
+	</div>-->
+	<!-- bai5 
+	<div class="baitap">
+		<h3>bài 5</h3>
+		<script type="text/javascript">
+			var choose;
+			choose = prompt("Hãy chọn 1 số từ 1 đến 3 để mở một trang web ");
+			switch(choose)
+			{
+				case "1": 
+					window.open("https://www.vnn.com");
+					break;
+				case "2": 
+					window.open("https://www.yahoo.com");
+					break;
+				case "3": 
+					window.open("https://www.echip.com.vn");
+					break;
+				default: window.open("https://google.com.vn").
+			}
+		</script>
+	</div>-->
+	<!-- bai6 -->
+	<div class="baitap">
+		<h3>bài 6: Sắp xếp mảng</h3>
+		<script type="text/javascript">
+			var soluong, x;
+			var ds = new Array(10);
+			do{
+				soluong = prompt("Bạn muốn nhập bao nhiêu người? ", "");
+			}while((parseInt(soluong)>10) || (parseInt(soluong) <0));
+			for(var i= 0; i<soluong; i++)
+			{
+				ds[i] = prompt("Nhập vào họ tên: ", "");
+			}
+			ds.sort();
+			document.write("<h2>Danh sách đã sắp xếp là: </h2>");
+			for(x in ds)
+			{
+				document.write(ds[x] + "<br>");
+			}
+		</script>
+	</div>
+</body>
+</html>
