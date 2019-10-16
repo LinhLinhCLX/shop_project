@@ -27,7 +27,7 @@ if (isset($_POST['logout']))
 $link_category = 'ecommerce/categories/editcategory.php';
 $categories_id = $_GET['category_id'];
 
-$query = "SELECT * FROM categories_t WHERE id = '$categories_id'";
+$query = "SELECT * FROM categories_t WHERE id = $categories_id";
 $kq=mysqli_query($connection,$query);
 $category = $kq->fetch_assoc();//trả về một mảng
 
@@ -36,11 +36,15 @@ if(isset($_POST['save']) || isset($_POST['save_close']))
     $title = $_POST['title'];
     $ordering = $_POST['ordering'];
     $published = $_POST['published'];
-    $query = "UPDATE categories_t SET title = '$title',ordering  = '$ordering',published='$published' WHERE categories_t.id = $categories_id;";
-    $data = mysqli_query($connection, $query);
+
+
+    $query1 = "UPDATE `categories_t` SET `title` = '$title', `ordering` = '$ordering', `published` = '$published' WHERE `categories_t`.`id` = $categories_id;";
+    mysqli_query($connection, $query1);
+
     if(isset($_POST['save_close']))
     {
-        header("location:".ADMIN_ROOT_SITE."/ecommerce/categories/list.php");
+
+        header("location:".ADMIN_ROOT_SITE."ecommerce/categories/list.php");
 
     }
 }
@@ -64,38 +68,38 @@ if(isset($_POST['save']) || isset($_POST['save_close']))
 
         <div class="col-md-9">
             <h2>Sửa Categories</h2>
-            <form action="<?php echo ADMIN_ROOT_SITE.$link_category;?>"></form>
-            <table class="table">
-                <tr>
-                    <th>Id</th>
-                    <td><?php echo $categories_id; ?></td>
-                </tr>
-                <tr>
-                    <th>Title</th>
-                    <td><input type="text" name="title" value="<?php echo $category['title']; ?>"></td>
-                </tr>
-                <tr>
-                    <th>Ordering</th>
-                    <td><input type="text" name="ordering" value="<?php echo $category['ordering'];?>"></td>
-                </tr>
-                <tr>
-                    <th>Status</th>
-                    <td>
-                        <select name="published">
-                            <option value="1" <?php echo $category['published']==1?' seclected ':'' ?>>Enable</option>
-                            <option value="0" <?php echo $category['published']==0?' seclected ':'' ?>>Disable</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <button type="submit" class="btn btn-primary" name="save">Apply</button>
-                        <button type="submit" class="btn btn-primary" name="save_close">Save & Hiển thị danh sách</button>
+            <form action="<?php echo ADMIN_ROOT_SITE.$link_category;?>?category_id=<?php echo $category['id']?>" method="post">
+                <table class="table">
+                    <tr>
+                        <th>Id</th>
+                        <td><input type="text" name="id" disabled = "disabled" value="<?php echo $category['id']; ?>"></td>
+                    </tr>
+                    <tr>
+                        <th>Title</th>
+                        <td><input type="text" name="title" value="<?php echo $category['title']; ?>"></td>
+                    </tr>
+                    <tr>
+                        <th>Ordering</th>
+                        <td><input type="text" name="ordering" value="<?php echo $category['ordering']; ?>"></td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td>
+                            <select name="published">
+                                <option value="1" <?php echo $category['published']==1?" seclected":"" ?>>Enable</option>
+                                <option value="0" <?php echo $category['published']==0?" seclected":"" ?>>Disable</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" class="btn btn-primary" name="save">Apply</button>
+                            <button type="submit" class="btn btn-primary" name="save_close">Save & Hiển thị danh sách</button>
 
-                    </td>
-                </tr>
-            </table>
-
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </div>
     </div>
 </div>

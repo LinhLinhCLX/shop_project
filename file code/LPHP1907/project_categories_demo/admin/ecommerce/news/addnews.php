@@ -1,2 +1,1 @@
-<?php
-    echo "this is addnews.php";
+<?php echo "This is add news" ?>
